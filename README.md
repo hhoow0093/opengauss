@@ -28,6 +28,20 @@ sudo yum update -y
 2. install necessary dependencies
 ```bash
 sudo yum install -y wget tar bzip2 net-tools
+
+sudo dnf update -y
+sudo dnf remove NetworkManager -y
+sudo dnf install NetworkManager -y
+sudo dnf update -y
+
+sudo dnf install -y gcc gcc-c++ make cmake bison flex \
+readline readline-devel zlib zlib-devel \
+libaio libaio-devel perl openldap-devel
+
+sudo dnf install -y readline-devel libaio-devel
+ldconfig -p | grep readline
+ldconfig -p | grep aio
+
 ```
 
 3. create dedicated user
